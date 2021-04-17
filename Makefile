@@ -13,7 +13,7 @@ PROGS = $(patsubst %.cpp, %, $(SRCS))
 all: $(PROGS)
 
 %: %.cpp Makefile
-	$(CXX) $(CXXFLAGS) -o $@ $< $(INCLUDES) $(LIBS) $(LDFLAGS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $< $(INCLUDES) $(LIBS) $(LDFLAGS)
 
 .PHONY: clean
 clean: 
